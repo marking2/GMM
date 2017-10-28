@@ -32,12 +32,24 @@ public class File {
 				s1 = str.split(";");
 				for (int i = 0; i < 10; i++) {
 
-					if(s1[i].isEmpty())
-						s1[i] = "*NULL*";
-					arr[r][i] = s1[i];
-					arr[r][i+1] = s1[i+1];
+// 					if(s1[i].isEmpty())
+// 						s1[i] = "*NULL*";
+// 					arr[r][i] = s1[i];
+// 					arr[r][i+1] = s1[i+1];
+				Wifi w_j = new Wifi();
+				w_j.setBSSID(s1[0]);
+				w_j.setLAT(s1[1]);
+				w_j.setLON(s1[2]);
+				w_j.setSSID(s1[3]);
+				w_j.setCrypt(s1[4]);
+				w_j.setBeacon_Interval(s1[5]);
+				w_j.setConnection_Mode(s1[6]);
+				w_j.setChannel(s1[7]);
+				w_j.setRXL(s1[8]);
+				w_j.setDate(s1[9]);
+				w_j.setTime(s1[10]);
 				}
-				r++;
+// 				r++;
 			}
 			for (int i = 0; i < 11; i++) {
 				System.out.println(Arrays.toString(arr[i]));
